@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="dist/style.css" />
+
+        <title>Frontend Mentor | Loopstudios landing page</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div id="overlay" class="overlay close hide-for-desktop"></div>
+            <div class="homepage_image">
+                <nav class="topNavBar flex flex-jc-sb">
+                    <img
+                        class="landingpage_logo"
+                        src="images/logo.svg"
+                        alt="Loopstudios logo"
+                    />
+
+                    <a
+                        id="btnHamburger"
+                        href="#"
+                        class="btnHamburger hide-for-desktop"
+                    >
+                        <img
+                            class="hamburger_icon"
+                            src="images/icon-hamburger.svg"
+                            alt="hamburger menu"
+                            onclick="toggle_sidenavbar('open')"
+                        />
+                    </a>
+
+                    <div
+                        class="header_menu flex flex-jc-c flex-ai-c hide-for-mobile"
+                    >
+                        <span>About</span>
+                        <span>Careers</span>
+                        <span>Events</span>
+                        <span>Products</span>
+                        <span>Support</span>
+                    </div>
+
+                    <div
+                        id="sidenavbar"
+                        class="sidenavbar close flex hide-for-desktop"
+                    >
+                        <div class="close_menu flex flex-jc-sb">
+                            <img
+                                class="logo"
+                                src="images/logo.svg"
+                                alt="logo image"
+                            />
+                            <img
+                                class="closeicon"
+                                src="images/icon-close.svg"
+                                alt="Close Menu"
+                                onclick="toggle_sidenavbar('close')"
+                            />
+                        </div>
+                        <div class="sidenavbar_menu flex flex-jc-c">
+                            <a href="#">About</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Events</a>
+                            <a href="#">Products</a>
+                            <a href="#">Support</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="Headline">
+                    <h1>Immersive experiences that deliver</h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero flex">
+            <div class="hero_image"></div>
+            <div class="SubHeadline flex">
+                <h2>The leader in interactive VR</h2>
+                <p>
+                    Founded in 2011, Loopstudios has been producing world-class
+                    virtual reality projects for some of the best companies
+                    around the globe. Our award-winning creations have
+                    transformed businesses through digital experiences that bind
+                    to their brand.
+                </p>
+            </div>
+        </section>
+
+        <section class="creations">
+            <div class="top_section flex flex-ai-c">
+                <h3>Our creations</h3>
+                <a href="#" class="topbutton hide-for-mobile">See all</a>
+            </div>
+            <div class="container flex flex-jc-c">
+                <div class="firstRow flex">
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-deep-earth.jpg"
+                            alt="Deep Earth image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-deep-earth.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">Deep earth</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-night-arcade.jpg"
+                            alt="Night Arcade image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-night-arcade.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">Night arcade</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-soccer-team.jpg"
+                            alt="Soccer Team VR image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-soccer-team.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">Soccer team VR</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-grid.jpg"
+                            alt="The Grid image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-grid.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">The grid</div>
+                        <div class="whitespace"></div>
+                    </div>
+                </div>
+
+                <div class="secondRow flex">
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-from-above.jpg"
+                            alt="From up above image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-from-above.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">From up above VR</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-pocket-borealis.jpg"
+                            alt="Pocket borealis image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-pocket-borealis.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">Pocket borealis</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-curiosity.jpg"
+                            alt="The curiosity image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-curiosity.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">The curiosity</div>
+                        <div class="whitespace"></div>
+                    </div>
+                    <div class="creation flex">
+                        <img
+                            class="hide-for-desktop"
+                            src="images/mobile/image-fisheye.jpg"
+                            alt="Make it fisheye image"
+                        />
+                        <img
+                            class="first hide-for-mobile"
+                            src="images/desktop/image-fisheye.jpg"
+                            alt="deep earth image"
+                        />
+                        <div class="text">Make it fisheye</div>
+                        <div class="whitespace"></div>
+                    </div>
+                </div>
+
+                <a href="#" class="button hide-for-desktop">See all</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container flex flex-jc-c flex-ai-c">
+                <div class="secondContainer flex">
+                    <img
+                        class="logo"
+                        src="images/logo.svg"
+                        alt="Loopstudios logo"
+                    />
+                    <div class="menu flex flex-jc-c flex-ai-c">
+                        <span>About</span>
+                        <span>Careers</span>
+                        <span>Events</span>
+                        <span>Products</span>
+                        <span>Support</span>
+                    </div>
+                </div>
+
+                <div class="thirdContainer flex flex-jc-c flex-ai-c">
+                    <div class="socialmedia flex flex-jc-c flex-ai-c">
+                        <img
+                            src="images/icon-facebook.svg"
+                            alt="Facebook Icon"
+                        />
+                        <img src="images/icon-twitter.svg" alt="Twitter Icon" />
+                        <img
+                            src="images/icon-pinterest.svg"
+                            alt="Pinterest Icon"
+                        />
+                        <img
+                            src="images/icon-instagram.svg"
+                            alt="Instagram Icon"
+                        />
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2021 Loopstudios. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+        <script src="app/js/script.js"></script>
+    </body>
+</html>
