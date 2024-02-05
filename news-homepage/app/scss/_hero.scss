@@ -1,0 +1,217 @@
+.hero {
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+        padding-left: 165px;
+        padding-right: 165px;
+    }
+
+    &_image {
+        position: relative;
+        background-image: url("../assets/images/image-web-mobile.jpg");
+        height: 300px;
+        width: 340px;
+        align-self: center;
+        background-size: cover;
+
+        @include breakpoint-up(large) {
+            position: relative;
+            background-image: url("../assets/images/image-web-desktop.jpg");
+            height: 300px;
+            width: 100%;
+            align-self: flex-start;
+            background-size: cover;
+        }
+    }
+
+    &_description {
+        padding: 0px 16px;
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            padding: 0px;
+            padding-top: 24px;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 1;
+            margin: 0px;
+            padding: 20px 0px;
+
+            @include breakpoint-up(large) {
+                font-size: 52px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .containerThree {
+            flex-direction: column;
+
+            @include breakpoint-up(large) {
+                margin-left: 60px;
+            }
+
+            p {
+                font-size: 15px;
+                color: $DarkGrayishBlue;
+                margin: 0px;
+                padding: 10px 0px;
+                line-height: 1.5;
+
+                @include breakpoint-up(large) {
+                    font-size: 16px;
+                    line-height: 2;
+                }
+            }
+
+            .button {
+                font-size: 15px;
+                font-weight: 700;
+                color: $OffWhite;
+                background-color: $SoftRed;
+                width: 185px;
+                padding: 15px 10px;
+                margin: 20px 0px;
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 5px;
+            }
+        }
+    }
+
+    .containerTwo {
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            margin-right: 15px;
+        }
+    }
+
+    .containerOne {
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+    }
+
+    &_card {
+        flex-direction: column;
+        background-color: $VeryDarkBlue;
+        padding: 0px 16px;
+        margin: 40px 16px;
+
+        @include breakpoint-up(large) {
+            margin: 0px;
+            padding: 0px 25px;
+            width: 70%;
+            margin-left: 15px;
+        }
+
+        h2 {
+            color: $SoftOrange;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: $OffWhite;
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $GrayishBlue;
+            margin: 0px;
+            line-height: 1.5;
+        }
+
+        .FirstC {
+            h3 {
+                padding: 20px 0px;
+            }
+
+            p {
+                border-bottom: 1px solid $OffWhite;
+                padding-bottom: 30px;
+            }
+        }
+
+        .SecondC {
+            h3 {
+                padding: 20px 0px;
+            }
+
+            p {
+                border-bottom: 1px solid $OffWhite;
+                padding-bottom: 30px;
+            }
+        }
+
+        .ThirdC {
+            h3 {
+                padding: 20px 0px;
+            }
+
+            p {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    &_rowCard {
+        flex-direction: column;
+        padding: 30px 16px;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            padding-top: 70px;
+        }
+
+        img {
+            height: 140px;
+            width: 100px;
+        }
+
+        .info {
+            flex-direction: column;
+            padding-left: 20px;
+
+            h4 {
+                font-size: 28px;
+                font-weight: 800;
+                margin: 0px;
+                color: $GrayishBlue;
+            }
+
+            .title {
+                font-size: 18px;
+                font-weight: 800;
+                color: $VeryDarkBlue;
+                padding: 15px 0px;
+
+                &:hover {
+                    color: $SoftRed;
+                }
+            }
+
+            .question {
+                font-size: 15px;
+                color: $DarkGrayishBlue;
+                line-height: 1.5;
+            }
+        }
+
+        .ItemOne {
+            padding-bottom: 30px;
+        }
+
+        .ItemTwo {
+            padding-bottom: 30px;
+        }
+    }
+}

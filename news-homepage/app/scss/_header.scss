@@ -1,0 +1,107 @@
+.header {
+    flex-direction: column;
+
+    .container {
+        padding: 33px 16px;
+
+        @include breakpoint-up(large) {
+            padding-top: 90px;
+            padding-left: 165px;
+            padding-right: 165px;
+        }
+    }
+
+    &_logo {
+        img {
+            height: 30px;
+            width: 45px;
+
+            @include breakpoint-up(large) {
+                height: 40px;
+                width: 64px;
+            }
+        }
+    }
+
+    &_hamburger {
+        img {
+            display: block;
+            height: 18px;
+            width: 40px;
+        }
+    }
+
+    .sidenavbar {
+        flex-direction: column;
+        height: 100vh;
+        width: 256px;
+        z-index: 10;
+        position: fixed;
+        right: 0;
+        background-color: $OffWhite;
+        transition: 500ms ease-in-out;
+
+        &.close {
+            right: -260px;
+        }
+
+        .close_menu {
+            align-self: end;
+            margin: 33px;
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        &_menu {
+            flex-direction: column;
+            padding-top: 20px;
+
+            a {
+                font-size: 18px;
+                font-weight: 400;
+                color: $VeryDarkBlue;
+                justify-self: center;
+                padding-bottom: 15px;
+                padding-top: 15px;
+                padding-left: 25px;
+
+                &:hover {
+                    color: $VeryDarkBlue;
+                    background-color: $GrayishBlue;
+                }
+            }
+        }
+    }
+
+    &_menu {
+        a {
+            font-size: 15px;
+            font-weight: 400;
+            color: $DarkGrayishBlue;
+            padding: 0px 30px;
+
+            &:hover {
+                color: $SoftRed;
+            }
+        }
+    }
+
+    .overlay {
+        background-color: $VeryDarkBlue;
+        display: block;
+        position: fixed;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.5;
+        z-index: 10;
+        overflow-x: hidden;
+
+        &.close {
+            display: none;
+        }
+    }
+}
