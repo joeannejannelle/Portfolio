@@ -1,0 +1,161 @@
+.header {
+    height: 800px;
+    width: auto;
+
+    .homepage_image {
+        // width: 100vh;
+        height: 830px;
+        position: relative;
+        //background-color: #000;
+        background-image: url("../images/mobile/image-hero.jpg");
+        background-size: cover;
+
+        @include breakpoint-up(large) {
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            //background-color: aqua;
+            background-image: url("../images/desktop/image-hero.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0px;
+        }
+    }
+
+    .topNavBar {
+        padding: 50px 30px 100px 30px;
+
+        @include breakpoint-up(large) {
+            padding: 64px 165px 64px 165px;
+        }
+
+        .landingpage_logo {
+            width: 185px;
+            height: 32px;
+
+            @include breakpoint-up(large) {
+                width: 195px;
+                height: 32px;
+            }
+        }
+
+        .hamburger_icon {
+            width: 30px;
+            height: 20px;
+        }
+
+        .header_menu {
+            font-family: "Alata";
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+
+            span {
+                margin-right: 30px;
+                border-bottom: solid 2px rgba(255, 255, 255, 0);
+                padding-bottom: 10px;
+
+                &:hover {
+                    border-bottom: solid 2px white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .sidenavbar {
+        flex-direction: column;
+        height: 70%;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: black;
+        transition: 500ms ease-in-out;
+
+        &.close {
+            right: -100%;
+        }
+
+        .close_menu {
+            margin: 50px 30px;
+            cursor: pointer;
+
+            .logo {
+                width: 160px;
+                height: 32px;
+            }
+
+            .closeicon {
+                width: 32px;
+            }
+        }
+
+        &_menu {
+            flex-direction: column;
+            margin-top: 60px;
+
+            a {
+                font-family: "Josefin Sans";
+                font-size: 18px;
+                font-weight: 400;
+                color: $white;
+                text-transform: uppercase;
+                justify-self: center;
+                padding-bottom: 15px;
+                padding-top: 15px;
+                padding-left: 30px;
+
+                &:hover {
+                    color: $black;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .Headline {
+        border: solid 2px $white;
+        margin: 0px 30px;
+        margin-top: 100px;
+
+        @include breakpoint-up(large) {
+            margin: 0px 625px 0px 165px;
+            margin-top: 60px;
+        }
+
+        h1 {
+            font-family: "Josefin Sans";
+            font-size: 40px;
+            font-weight: 300;
+            color: $white;
+            text-transform: uppercase;
+            line-height: 1;
+            padding: 20px;
+
+            @include breakpoint-up(large) {
+                font-size: 72px;
+                padding: 30px;
+            }
+        }
+    }
+
+    .overlay {
+        background-color: black;
+        display: block;
+        position: fixed;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.5;
+        z-index: 10;
+        overflow-x: hidden;
+
+        &.close {
+            display: none;
+        }
+    }
+}
