@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="dist/style.css" />
+
+        <title>Frontend Mentor | News homepage</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header flex">
+            <div id="overlay" class="overlay close hide-for-desktop"></div>
+            <nav class="container flex flex-jc-sb flex-ai-c">
+                <a href="/" class="header_logo">
+                    <img src="assets/images/logo.svg" alt="News Page Logo" />
+                </a>
+
+                <a
+                    id="btnHamburger"
+                    href="#"
+                    class="header_hamburger hide-for-desktop"
+                >
+                    <img
+                        src="assets/images/icon-menu.svg"
+                        alt="Hamburger Menu"
+                        onclick="toggle_sidenavbar('open')"
+                    />
+                </a>
+
+                <div class="header_menu flex hide-for-mobile">
+                    <a href="#">Home</a>
+                    <a href="#">New</a>
+                    <a href="#">Popular</a>
+                    <a href="#">Trending</a>
+                    <a href="#">Categories</a>
+                </div>
+            </nav>
+
+            <div id="sidenavbar" class="sidenavbar close flex hide-for-desktop">
+                <div class="close_menu flex">
+                    <img
+                        src="assets/images/icon-menu-close.svg"
+                        alt="Close Menu"
+                        onclick="toggle_sidenavbar('close')"
+                    />
+                </div>
+                <div class="sidenavbar_menu flex flex-jc-c">
+                    <a href="#">Home</a>
+                    <a href="#">New</a>
+                    <a href="#">Popular</a>
+                    <a href="#">Trending</a>
+                    <a href="#">Categories</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero flex">
+            <div class="containerOne flex">
+                <div class="containerTwo flex">
+                    <div class="hero_image"></div>
+                    <div class="hero_description flex">
+                        <h1>The Bright Future of Web 3.0?</h1>
+                        <div class="containerThree flex">
+                            <p>
+                                We dive into the next evolution of the web that
+                                claims to put the power of the platforms back
+                                into the hands of the people. But is it really
+                                fulfilling its promise?
+                            </p>
+                            <a href="#" class="button">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero_card flex">
+                    <h2>New</h2>
+                    <div class="FirstC">
+                        <h3>Hydrogen VS Electric Cars</h3>
+                        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                    </div>
+                    <div class="SecondC">
+                        <h3>The Downsides of AI Artistry</h3>
+                        <p>
+                            What are the possible adverse effects of on-demand
+                            AI image generation?
+                        </p>
+                    </div>
+                    <div class="ThirdC">
+                        <h3>Is VC Funding Drying Up?</h3>
+                        <p>
+                            Private funding by VC firms is down 50% YOY. We take
+                            a look at what that means.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero_rowCard flex">
+                <div class="ItemOne flex">
+                    <img
+                        src="assets/images/image-retro-pcs.jpg"
+                        alt="Retro PC Image"
+                    />
+                    <div class="info flex">
+                        <h4>01</h4>
+                        <a href="#" class="title">Reviving Retro PCs</a>
+                        <div class="question">
+                            What happens when old PCs are given modern upgrades?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ItemTwo flex">
+                    <img
+                        src="assets/images/image-top-laptops.jpg"
+                        alt="Laptops in 2022 Image"
+                    />
+                    <div class="info flex">
+                        <h4>02</h4>
+                        <a href="#" class="title">Top 10 Laptops of 2022</a>
+                        <div class="question">
+                            Our best picks for various needs and budgets.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ItemThree flex">
+                    <img
+                        src="assets/images/image-gaming-growth.jpg"
+                        alt="Gaming Growth Image"
+                    />
+                    <div class="info flex">
+                        <h4>03</h4>
+                        <a href="#" class="title">The Growth of Gaming</a>
+                        <div class="question">
+                            How the pandemic has sparked fresh opportunities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home
+  New
+  Popular
+  Trending
+  Categories
+ 
+   -->
+
+        <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+        <script src="app/js/script.js"></script>
+    </body>
+</html>
