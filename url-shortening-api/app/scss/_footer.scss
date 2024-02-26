@@ -1,0 +1,81 @@
+.footer {
+    flex-direction: column;
+    background-color: $VeryDarkViolet;
+    //height: 100vh;
+    padding: 54px 0px;
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        padding: 54px 165px;
+    }
+
+    &_logo {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 54px;
+    }
+
+    .container {
+        flex-direction: column;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint-up(large) {
+                margin-right: 50px;
+                align-items: start;
+
+                &:first-child {
+                    margin-left: 100px;
+                    margin-top: -32px;
+                }
+
+                &:nth-child(2) {
+                    margin-top: -32px;
+                }
+
+                &:last-child {
+                    margin-left: 60px;
+                }
+            }
+        }
+
+        h5 {
+            color: #fff;
+            font-size: 16px;
+            margin: 24px 0px;
+        }
+
+        a {
+            color: $GrayishViolet;
+            margin-bottom: 12px;
+        }
+    }
+
+    .social {
+        margin-top: 32px;
+
+        img {
+            width: 24px;
+            margin-right: 15px;
+
+            &:last-child {
+                margin: 0px;
+            }
+
+            @include breakpoint-up(large) {
+                margin-right: 20px;
+            }
+        }
+    }
+}

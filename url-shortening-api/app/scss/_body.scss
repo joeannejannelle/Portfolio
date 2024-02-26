@@ -1,0 +1,208 @@
+.body {
+    flex-direction: column;
+    background-color: #f0f1f6;
+    padding-top: 180px;
+    padding-right: 24px;
+    padding-bottom: 60px;
+    padding-left: 24px;
+
+    @include breakpoint-up(large) {
+        padding-right: 165px;
+        padding-left: 165px;
+    }
+
+    .shorten {
+        position: relative;
+        top: 50%;
+        margin-top: -260px;
+
+        &_box {
+            border-radius: 15px;
+            height: 160px;
+            background-color: $DarkViolet;
+
+            @include breakpoint-up(large) {
+                height: 179px;
+            }
+
+            .shorten_bg {
+                position: absolute;
+                height: 120px;
+                background-image: url("../images/bg-shorten-mobile.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right top;
+                border-top-right-radius: 15px;
+
+                @include breakpoint-up(large) {
+                    background-image: url("../images/bg-shorten-desktop.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 15px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .shorten_content {
+                flex-direction: column;
+                padding: 24px;
+
+                @include breakpoint-up(large) {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 52px 64px;
+                }
+
+                input[type="text"] {
+                    padding: 15px 0px;
+                    padding-left: 15px;
+                    padding-right: 90px;
+                    margin-bottom: 15px;
+                    border-radius: 15px;
+
+                    @include breakpoint-up(large) {
+                        padding: 24px 500px 24px 32px;
+                        margin-bottom: 0px;
+                        font-size: 18px;
+                    }
+                }
+
+                .shorten_button {
+                    font-size: 15px;
+                    color: #fff;
+                    background-color: $Cyan;
+                    padding: 15px 90px;
+                    text-align: center;
+                    width: 278px;
+                    border-radius: 15px;
+
+                    @include breakpoint-up(large) {
+                        width: 188px;
+                        padding: 23px 42px;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &_container {
+        flex-direction: column;
+
+        .sub_title {
+            color: $VeryDarkViolet;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+
+            @include breakpoint-up(large) {
+                font-size: 32px;
+                margin-top: 132px;
+                letter-spacing: -1px;
+            }
+        }
+
+        p {
+            color: $GrayishViolet;
+            font-size: 15px;
+            text-align: center;
+            line-height: 1.5;
+
+            @include breakpoint-up(large) {
+                font-size: 18px;
+                word-wrap: break-word;
+                width: 500px;
+            }
+        }
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 90px;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            color: $VeryDarkBlue;
+            font-size: 22px;
+            margin: 20px 0px;
+
+            @include breakpoint-up(large) {
+                align-self: flex-start;
+            }
+        }
+
+        .info {
+            color: $GrayishViolet;
+            font-size: 15px;
+
+            @include breakpoint-up(large) {
+                text-align: start;
+            }
+        }
+
+        .stats {
+            position: relative;
+            flex-direction: column;
+            background-color: #fff;
+            width: 327px;
+            height: 267px;
+            padding-right: 24px;
+            padding-left: 24px;
+            // margin-bottom: 90px;
+            border-radius: 15px;
+
+            @include breakpoint-up(large) {
+                margin-right: 30px;
+                border-radius: 10px;
+
+                &:first-child {
+                    margin-bottom: 80px;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                    margin-top: 80px;
+                }
+            }
+        }
+
+        .circle {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: $DarkViolet;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            @include breakpoint-up(large) {
+                left: 25%;
+            }
+
+            img {
+                color: $Cyan;
+            }
+        }
+
+        .Vertical {
+            height: 100px;
+            align-self: center;
+            border-left: 10px solid $Cyan;
+
+            @include breakpoint-up(large) {
+                rotate: 90deg;
+                height: 70px;
+            }
+        }
+    }
+}
